@@ -26,12 +26,21 @@ class ViewController: UIViewController {
 //        chooseBtn.layer.cornerRadius = chooseBtn.bounds.height / 2
         
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let vc = segue.destination as? MyTableViewController {
+//            vc.delegate = self
+//        }
+//    }
 
-    @IBAction func chooseBtnTapped(_ sender: Any) {
+    @IBAction func choosingBtnTapped(_ sender: Any) {
+//        performSegue(withIdentifier: "fromFirstToSecond", sender: nil)
+        
         // this storyboard is default, so it's Main Storyboard
         // just like the code snippet: let storyboard = UIStoryboard(name: "Main", bundle: nil)
         // we can use extension UIStoryboard, let storyboard = UIStoryboard(name: "Main")
 //        let storyboard = UIStoryboard(name: "Main")
+        
         
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "\(MyTableViewController.self)") as? MyTableViewController else { return }
         
@@ -59,7 +68,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: AvatarChoosingDelegate {
-    
+
     func didChoosing(image: UIImage, gender: String, color: UIColor) {
         avatarImageView.image = image
         genderLabel.text = gender

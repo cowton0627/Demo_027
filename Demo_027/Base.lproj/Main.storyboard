@@ -20,7 +20,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zPy-0u-bV4">
                                 <rect key="frame" x="16" y="99" width="343" height="244"/>
-                                <color key="backgroundColor" red="0.5450980392" green="0.72941176470000002" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="244" id="ZHz-1B-JS8"/>
                                     <constraint firstAttribute="width" constant="343" id="g63-c5-NPe"/>
@@ -63,7 +63,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="chooseBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JgK-jy-VGm"/>
+                                    <action selector="choosingBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vdt-Lu-ddg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -111,7 +111,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="206"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="001" translatesAutoresizingMaskIntoConstraints="NO" id="huY-te-agi">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="girl" translatesAutoresizingMaskIntoConstraints="NO" id="huY-te-agi">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="206"/>
                                                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                     <constraints>
@@ -124,7 +124,7 @@
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Button"/>
                                                     <connections>
-                                                        <action selector="btnTapped:" destination="Ve9-dI-gu1" eventType="touchUpInside" id="nKs-QO-700"/>
+                                                        <action selector="btnsTapped:" destination="Ve9-dI-gu1" eventType="touchUpInside" id="pFt-fK-lCY"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -146,7 +146,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="206"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="002" translatesAutoresizingMaskIntoConstraints="NO" id="U5h-8m-u8j">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boy" translatesAutoresizingMaskIntoConstraints="NO" id="U5h-8m-u8j">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="206"/>
                                                     <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                     <constraints>
@@ -159,7 +159,7 @@
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Button"/>
                                                     <connections>
-                                                        <action selector="btnTapped:" destination="Ve9-dI-gu1" eventType="touchUpInside" id="awa-ZG-1wj"/>
+                                                        <action selector="btnsTapped:" destination="Ve9-dI-gu1" eventType="touchUpInside" id="T4N-Bv-CIK"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -181,7 +181,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="206"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="003" translatesAutoresizingMaskIntoConstraints="NO" id="8Rp-l9-rfN">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="machine" translatesAutoresizingMaskIntoConstraints="NO" id="8Rp-l9-rfN">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="206"/>
                                                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                     <constraints>
@@ -194,7 +194,7 @@
                                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Button"/>
                                                     <connections>
-                                                        <action selector="btnTapped:" destination="Ve9-dI-gu1" eventType="touchUpInside" id="Pi5-hV-9Kf"/>
+                                                        <action selector="btnsTapped:" destination="Ve9-dI-gu1" eventType="touchUpInside" id="Bin-pl-Zrs"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -250,14 +250,17 @@
         </scene>
     </scenes>
     <resources>
-        <image name="001" width="225" height="225"/>
-        <image name="002" width="225" height="225"/>
-        <image name="003" width="640" height="640"/>
+        <image name="boy" width="225" height="225"/>
+        <image name="girl" width="225" height="225"/>
+        <image name="machine" width="640" height="640"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -12,17 +12,17 @@ protocol AvatarChoosingDelegate {
 }
 
 class MyTableViewController: UITableViewController {
-        
+    
     private let userDatas: [UserData] = [
-        UserData(avatar: UIImage(named: "001")!, gender: "女生", customColor: #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1) ),
-        UserData(avatar: UIImage(named: "002")!, gender: "男生", customColor: #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1) ),
-        UserData(avatar: UIImage(named: "003")!, gender: "機體", customColor: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1) )
+        UserData(avatar: UIImage(named: "girl")!,    gender: "女生", customColor: #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1) ),
+        UserData(avatar: UIImage(named: "boy")!,     gender: "男生", customColor: #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1) ),
+        UserData(avatar: UIImage(named: "machine")!, gender: "機體", customColor: #colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1) )
     ]
     
     // MARK: - delegation pattern
     var delegate: AvatarChoosingDelegate!
     // MARK: - closure
-    var choosingCompletion: ( (UserData) -> Void )?
+//    var choosingCompletion: ( (UserData) -> Void )?
     
     @IBOutlet var personalImageView: [UIImageView]!
 
@@ -36,7 +36,7 @@ class MyTableViewController: UITableViewController {
         
     }
     
-    @IBAction func btnTapped(_ sender: UIButton) {
+    @IBAction func btnsTapped(_ sender: UIButton) {
         // MARK: - delegation pattern
         let userData = userDatas[sender.tag]
         delegate.didChoosing(image: userData.avatar,
